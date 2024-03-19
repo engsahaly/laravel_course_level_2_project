@@ -22,6 +22,11 @@ Route::name('front.')->group(function () {
 });
 
 
+
+Route::name('admin.')->prefix('admin')->group(function () {
+    Route::view('/', 'admin.index')->name('index');
+});
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
