@@ -1,12 +1,15 @@
 @extends('admin.auth.master')
 
-@section('title', 'Login')
+@section('title', __('keywords.login'))
 
 @section('content')
     <div class="wrapper vh-100">
         <div class="row align-items-center h-100">
+
             <form class="col-lg-3 col-md-4 col-10 mx-auto text-center" method="POST" action="{{ route('admin.login') }}">
                 @csrf
+
+                @include('admin.partials.language')
 
                 <a class="navbar-brand mx-auto mt-2 flex-fill text-center" href="./index.html">
                     <svg version="1.1" id="logo" class="navbar-brand-img brand-md" xmlns="http://www.w3.org/2000/svg"
@@ -20,33 +23,31 @@
                     </svg>
                 </a>
 
-                <h1 class="h6 mb-3">Sign in</h1>
+                <h1 class="h6 mb-3">{{ __('keywords.sign_in') }}</h1>
 
                 <!-- Session Status -->
                 <x-auth-session-status class="mb-4" :status="session('status')" />
 
                 <div class="form-group">
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control form-control-lg" placeholder="Email address"
-                        name="email" :value="old('email')">
+                    <label for="inputEmail" class="sr-only">{{ __('keywords.email') }}</label>
+                    <input type="email" id="inputEmail" class="form-control form-control-lg"
+                        placeholder="{{ __('keywords.email') }}" name="email" :value="old('email')">
                     <x-input-error :messages="$errors->get('email')" class="mt-2" />
                 </div>
 
                 <div class="form-group">
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control form-control-lg" placeholder="Password"
-                        name="password">
+                    <label for="inputPassword" class="sr-only">{{ __('keywords.password') }}</label>
+                    <input type="password" id="inputPassword" class="form-control form-control-lg"
+                        placeholder="{{ __('keywords.password') }}" name="password">
                     <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
 
                 <div class="checkbox mb-3">
                     <label>
-                        <input type="checkbox" value="remember-me" name="remember"> Stay logged in </label>
+                        <input type="checkbox" value="remember-me" name="remember">{{ __('keywords.remember') }}</label>
                 </div>
 
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
-
-                <p class="mt-5 mb-3 text-muted">© 2020</p>
+                <button class="btn btn-lg btn-primary btn-block" type="submit">{{ __('keywords.login') }}</button>
             </form>
         </div>
     </div>
