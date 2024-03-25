@@ -15,34 +15,28 @@
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    <label for="title">{{ __('keywords.title') }}</label>
+                                    <x-form-label field="title"></x-form-label>
                                     <input type="text" name="title" class="form-control"
                                         placeholder="{{ __('keywords.title') }}">
-                                    @error('title')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                    <x-validation-error field="title"></x-validation-error>
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label for="icon">{{ __('keywords.icon') }}</label>
+                                    <x-form-label field="icon"></x-form-label>
                                     <input type="text" name="icon" class="form-control"
                                         placeholder="{{ __('keywords.icon') }}">
-                                    @error('icon')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                    <x-validation-error field="icon"></x-validation-error>
                                 </div>
 
                                 <div class="col-md-12 mt-2">
-                                    <label for="description">{{ __('keywords.description') }}</label>
+                                    <x-form-label field="description"></x-form-label>
                                     <textarea name="description" class="form-control" placeholder="{{ __('keywords.description') }}"></textarea>
-                                    @error('description')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                                    <x-validation-error field="description"></x-validation-error>
                                 </div>
 
                             </div>
 
-                            <button type="submit" class="btn btn-primary btn-sm mt-2">{{ __('keywords.submit') }}</button>
+                            <x-submit-button></x-submit-button>
                         </form>
                     </div>
                 </div>
