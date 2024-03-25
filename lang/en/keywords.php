@@ -31,4 +31,5 @@ return [
     'edit_service'        => 'Edit Service',
     'created_successfully' => 'Your record created successfully',
     'updated_successfully' => 'Your record updated successfully',
+    'deleted_successfully' => 'Your record has been deleted successfully',
 ];
