@@ -23,8 +23,8 @@ return [
     'created_successfully' => 'Your record created successfully',
     'updated_successfully' => 'Your record updated successfully',
     'deleted_successfully' => 'Your record has been deleted successfully',
-    'no_records_found' => 'No Records Found',
-    'components'       => 'Components',
+    'no_records_found'     => 'No Records Found',
+    'components'           => 'Components',
 
     // Services module
     'services'         => 'Services',
@@ -48,4 +48,7 @@ return [
     'email'        => 'Email',
     'subject'      => 'Subject',
     'message'      => 'Message',
+
+    // subscribers module
+    'subscribers' => 'Subscribers',
 ];
