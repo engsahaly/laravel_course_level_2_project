@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SubscriberController;
+use App\Http\Controllers\TestmonialController;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 /**
@@ -46,6 +47,11 @@ Route::name('admin.')->prefix(LaravelLocalization::setLocale() . '/admin')->midd
         // =================================== SUBSCRIBERS
         Route::controller(SubscriberController::class)->group(function () {
             Route::resource('subscribers', SubscriberController::class)->only(['index', 'destroy']);
+        });
+
+        // =================================== TESTMONIALS
+        Route::controller(TestmonialController::class)->group(function () {
+            Route::resource('testmonials', TestmonialController::class);
         });
     });
 
