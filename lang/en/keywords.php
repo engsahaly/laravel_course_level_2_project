@@ -40,4 +40,12 @@ return [
     'add_new_feature'  => 'Add New Feature',
     'show_feature'     => 'Show Feature',
     'edit_feature'     => 'Edit Feature',
+
+    // messages module
+    'messages'     => 'Messages',
+    'show_message' => 'Show Message',
+    'name'         => 'Name',
+    'email'        => 'Email',
+    'subject'      => 'Subject',
+    'message'      => 'Message',
 ];
