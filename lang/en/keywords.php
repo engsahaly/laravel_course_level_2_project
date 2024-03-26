@@ -16,20 +16,28 @@ return [
     // Home page
     'home'  => 'Home',
 
-    // Services module
-    'components'          => 'Components',
-    'services'            => 'Services',
-    'title'               => 'Title',
-    'icon'                => 'Icon',
-    'actions'             => 'Actions',
-    'description'         => 'Description',
-    'no_records_found'    => 'No Records Found',
-    'add_new'             => 'Add New',
-    'add_new_service'     => 'Add New Service',
-    'submit'              => 'Submit',
-    'show_service'        => 'Show Service',
-    'edit_service'        => 'Edit Service',
+    // common translations
+    'actions'              => 'Actions',
+    'add_new'              => 'Add New',
+    'submit'               => 'Submit',
     'created_successfully' => 'Your record created successfully',
     'updated_successfully' => 'Your record updated successfully',
     'deleted_successfully' => 'Your record has been deleted successfully',
+    'no_records_found' => 'No Records Found',
+    'components'       => 'Components',
+
+    // Services module
+    'services'         => 'Services',
+    'title'            => 'Title',
+    'icon'             => 'Icon',
+    'description'      => 'Description',
+    'add_new_service'  => 'Add New Service',
+    'show_service'     => 'Show Service',
+    'edit_service'     => 'Edit Service',
+
+    // features module
+    'features'         => 'Features',
+    'add_new_feature'  => 'Add New Feature',
+    'show_feature'     => 'Show Feature',
+    'edit_feature'     => 'Edit Feature',
 ];
