@@ -24,7 +24,7 @@
                                 <tr>
                                     <th width="5%">#</th>
                                     <th>{{ __('keywords.title') }}</th>
-                                    <th width="10%">{{ __('keywords.icon') }}</th>
+                                    <th width="15%">{{ __('keywords.icon') }}</th>
                                     <th width="15%">{{ __('keywords.actions') }}</th>
                                 </tr>
                             </thead>
