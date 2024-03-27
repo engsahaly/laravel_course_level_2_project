@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
-    <a href="index.html" class="navbar-brand p-0">
+    <a href="{{ route('front.index') }}" class="navbar-brand p-0">
         <h1 class="m-0">BizConsult</h1>
         <!-- <img src="{{ asset('assets-front') }}/img/logo.png" alt="Logo"> -->
     </a>

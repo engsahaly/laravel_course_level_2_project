@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FeatureController;
+use App\Http\Controllers\FrontController;
 use App\Http\Controllers\MessageController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
@@ -13,11 +14,20 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 /**
  * Front Routes
  */
-Route::name('front.')->group(function () {
-    Route::view('/', 'front.index')->name('index');
-    Route::view('/about', 'front.about')->name('about');
-    Route::view('/service', 'front.service')->name('service');
-    Route::view('/contact', 'front.contact')->name('contact');
+Route::name('front.')->controller(FrontController::class)->group(function () {
+    // =================================== HOME PAGE
+    Route::post('/subscriber/store', 'subscriberStore')->name('subscriber.store');
+    Route::get('/', 'index')->name('index');
+
+    // =================================== ABOUT PAGE
+    Route::get('/about', 'about')->name('about');
+
+    // =================================== SERVICE PAGE
+    Route::get('/service', 'service')->name('service');
+
+    // =================================== CONTACT PAGE
+    Route::post('/contact/store', 'contactStore')->name('contact.store');
+    Route::get('/contact', 'contact')->name('contact');
 });
 
 
